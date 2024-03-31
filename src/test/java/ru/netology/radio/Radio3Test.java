@@ -114,9 +114,9 @@ public class Radio3Test {
     @Test
     public void shouldGetCurrentVolume() { //получить текущий уровень громкости
         Radio3 radio = new Radio3();
-        radio.setCurrentVolume(56);
+        radio.setCurrentVolume(55);
 
-        int expected = 56;
+        int expected = 55;
         int actual = radio.getCurrentVolume();
 
         Assertions.assertEquals(expected, actual);
@@ -125,11 +125,11 @@ public class Radio3Test {
     @Test
     public void shouldIncreaseVolume() { //прибавить громкость
         Radio3 radio = new Radio3();
-        radio.setCurrentVolume(34);
+        radio.setCurrentVolume(33);
 
         radio.increaseVolume();
 
-        int expected = 35;
+        int expected = 34;
         int actual = radio.getCurrentVolume();
 
         Assertions.assertEquals(expected, actual);
@@ -138,11 +138,11 @@ public class Radio3Test {
     @Test
     public void shouldReduceVolume() { //убавить громкость
         Radio3 radio = new Radio3();
-        radio.setCurrentVolume(67);
+        radio.setCurrentVolume(63);
 
         radio.reduceVolume();
 
-        int expected = 66;
+        int expected = 62;
         int actual = radio.getCurrentVolume();
 
         Assertions.assertEquals(expected, actual);
@@ -173,6 +173,5 @@ public class Radio3Test {
 
         Assertions.assertEquals(expected, actual);
     }
-
 
 }
